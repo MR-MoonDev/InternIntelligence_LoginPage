@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #7c3aed;        /* Violet-600 */
+  --color-secondary: #facc15;      /* Yellow-400 */
+  --color-background: #0ff1f199;     /* Warm light cream */
+  --color-surface: #ffffff;
+  --color-text: #1e293b;           /* Slate-800 */
+  --color-error: #ef4444;          /* Red-500 */
+  --color-success: #22c55e;        /* Green-500 */
+}
+
+@layer utilities {
+  .bg-theme {
+    background-color: var(--color-background);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  .text-success {
+    color: var(--color-success);
+  }
+
+  .card-style {
+    @apply bg-surface p-8 rounded-2xl shadow-xl w-full max-w-sm animate-fadeIn;
+  }
+
+  .animate-fadeIn {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+}
+  
